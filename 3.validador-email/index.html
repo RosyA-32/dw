@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Email Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>📧 Validador de Email</h1>
+        <p class="description">Introduce una dirección de correo y te diremos si es válida o no.</p>
+
+        <div class="input-wrapper">
+            <input type="email" id="emailInput" placeholder="ejemplo@correo.com" autofocus>
+            <button id="validateBtn">Validar</button>
+        </div>
+
+        <div class="result-area" id="resultArea">
+            <span class="result-icon" id="resultIcon">📨</span>
+            <span class="result-text" id="resultText">Esperando email...</span>
+        </div>
+
+        <div class="tip">
+            <p>💡 Un email válido debe tener: nombre@dominio.extension</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

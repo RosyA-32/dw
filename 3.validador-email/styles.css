@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #1e1e2f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background: #2d2d44;
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    padding: 2.5rem;
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+    border: 1px solid #3d3d5c;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    color: #b0b0c0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+#emailInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 14px 20px;
+    border: 2px solid #3d3d5c;
+    border-radius: 50px;
+    font-size: 1rem;
+    background: #1e1e2f;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#emailInput::placeholder {
+    color: #6b6b8b;
+}
+
+#emailInput:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.3);
+}
+
+#validateBtn {
+    background: linear-gradient(135deg, #a78bfa, #ec4899);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+#validateBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px -5px rgba(167, 139, 250, 0.5);
+}
+
+.result-area {
+    background: #1e1e2f;
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid #3d3d5c;
+    min-height: 80px;
+}
+
+.result-icon {
+    font-size: 2.5rem;
+}
+
+.result-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e0e0f0;
+    word-break: break-word;
+}
+
+/* Clases de estado */
+.result-area.valid {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.result-area.invalid {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.tip {
+    background: #3d3d5c;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    color: #c0c0d0;
+    font-size: 0.9rem;
+    border-left: 4px solid #a78bfa;
+}
+
+.tip p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .input-wrapper {
+        flex-direction: column;
+    }
+    
+    #validateBtn {
+        width: 100%;
+    }
+}
