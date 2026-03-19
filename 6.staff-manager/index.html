@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Manager - Gestión de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>👥 Staff Manager</h1>
+            <p class="subtitle">Sistema de gestión de empleados</p>
+        </header>
+        
+        <div class="stats-card">
+            <div class="stat">
+                <span class="stat-label">Total empleados</span>
+                <span class="stat-value" id="totalEmployees">0</span>
+            </div>
+        </div>
+        
+        <!-- Formulario para agregar empleado -->
+        <div class="form-wrapper">
+            <h2>➕ Registrar nuevo empleado</h2>
+            <form id="employeeForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Nombre *</label>
+                        <input type="text" id="firstName" placeholder="Ej: Juan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Apellido *</label>
+                        <input type="text" id="lastName" placeholder="Ej: Pérez" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono *</label>
+                        <input type="tel" id="phone" placeholder="+34 600 123 456" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="salary">Salario (€) *</label>
+                        <input type="number" id="salary" min="0" step="0.01" placeholder="30000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate">Fecha nacimiento *</label>
+                        <input type="date" id="birthdate" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">URL de la foto (opcional)</label>
+                    <input type="url" id="photo" placeholder="https://ejemplo.com/foto.jpg">
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <span class="btn-icon">➕</span> Agregar empleado
+                </button>
+            </form>
+        </div>
+
+        <!-- Lista de empleados -->
+        <div class="employees-section">
+            <h2>📋 Lista de empleados</h2>
+            <div id="employeesGrid" class="employees-grid">
+                <!-- Las tarjetas se generarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
