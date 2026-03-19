@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Palíndromos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Verificador de Palíndromos</h1>
+        <p class="subtitle">¿Tu palabra o frase se lee igual al derecho y al revés? Compruébalo al instante.</p>
+        
+        <div class="input-group">
+            <input type="text" id="wordInput" placeholder="Ej: reconocer, Anita lava la tina..." autofocus>
+            <button id="checkBtn">Comprobar</button>
+        </div>
+        
+        <div class="result-card" id="resultCard">
+            <div class="result-icon" id="resultIcon">🔍</div>
+            <div class="result-message" id="resultMessage">Esperando palabra...</div>
+        </div>
+        
+        <div class="examples">
+            <p>Ejemplos rápidos:</p>
+            <button class="example-btn" data-example="reconocer">reconocer</button>
+            <button class="example-btn" data-example="Anita lava la tina">Anita lava la tina</button>
+            <button class="example-btn" data-example="hola">hola</button>
+            <button class="example-btn" data-example="Somos o no somos">Somos o no somos</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
