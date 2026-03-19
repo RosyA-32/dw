@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 GitHub Profile Explorer</h1>
+            <p>Busca un usuario de GitHub y descubre su perfil y repositorios</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="username" placeholder="Ej: octocat" autofocus>
+                <button id="searchBtn">Buscar</button>
+                <button id="clearBtn" class="clear-btn">Limpiar</button>
+            </div>
+        </div>
+
+        <!-- Spinner de carga -->
+        <div id="spinner" class="spinner hidden">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Perfil y repositorios -->
+        <div id="profileSection" class="profile-section hidden">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img id="avatar" src="" alt="Avatar" class="avatar">
+                    <div class="profile-info">
+                        <h2 id="name">Nombre</h2>
+                        <p id="bio" class="bio">Biografía</p>
+                        <p id="location" class="location">📍 Ubicación</p>
+                        <p id="company" class="company">🏢 Empresa</p>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="reposCount">0</span>
+                        <span class="stat-label">Repositorios</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="followersCount">0</span>
+                        <span class="stat-label">Seguidores</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="followingCount">0</span>
+                        <span class="stat-label">Siguiendo</span>
+                    </div>
+                </div>
+                <a id="profileLink" href="#" target="_blank" class="profile-link">Ver perfil en GitHub</a>
+            </div>
+
+            <h3 class="repos-title">📦 Repositorios más populares</h3>
+            <div id="reposContainer" class="repos-grid"></div>
+        </div>
+
+        <div id="errorMessage" class="error-message hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
